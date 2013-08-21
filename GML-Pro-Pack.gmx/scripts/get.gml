@@ -1,0 +1,12 @@
+var table_name,rindex,field_name,tindex,findex;
+table_name=argument0;
+rindex=real(argument1);
+field_name=argument2;
+tindex = table_index(table_name);
+if ( tindex == -1 ) return global.d;
+findex = field_index(tindex,field_name);
+if ( findex == -1 ) return global.d;
+global.datavec[0]=tindex;
+global.datavec[1]=rindex;
+global.datavec[2]=findex;
+return dvget();

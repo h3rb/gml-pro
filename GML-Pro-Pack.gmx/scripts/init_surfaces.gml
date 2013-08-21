@@ -1,0 +1,15 @@
+global.screen=surface_create_color_alpha(global.width, global.height, c_black,0);
+global.screen2=surface_create_color_alpha(global.width, global.height, c_black,0);
+global.surface_tiny=surface_create_color_alpha(64,64,c_black,0);
+//global.surface_2048=surface_create_color_alpha(2048,2048,c_black,0); // does not work
+global.surface_1024=surface_create_color_alpha(1024,1024,c_black,0);
+global.surface_512=surface_create_color_alpha(512,512,c_black,0);
+global.surface_512a=surface_create_color_alpha(512,512,c_black,0);
+global.surface_512b=surface_create_color_alpha(512,512,c_black,0);
+global.surface_256=surface_create_color_alpha(256,256,c_black,0);
+global.surface_128=surface_create_color_alpha(128,128,c_black,0);
+global.surface_64=surface_create_color_alpha(64,64,c_black,0);
+global.surface_32=surface_create_color_alpha(32,32,c_black,0);
+global.surface_16=surface_create_color_alpha(16,16,c_black,0);
+global.surface_1=surface_create(1,1); // used by surface_get_alpha()
+global.surface_bg=surface_create_color_alpha(global.width,global.height,c_black,0);

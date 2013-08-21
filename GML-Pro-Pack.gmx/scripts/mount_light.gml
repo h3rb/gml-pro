@@ -1,0 +1,34 @@
+var o,i,ofsx,ofsy,
+ color,light_tween,light_duration,
+ light_sprite,light_sub,light_dsub,
+ light_spin,rotation,blend,alpha,scale,instant;
+o=argument0;
+i=argument1;
+ofsx=argument2;
+ofsy=argument3;
+color=argument4;
+light_tween=argument5;
+light_duration=argument6;
+light_sprite=argument7;
+light_sub=argument8;
+light_dsub=argument9;
+light_spin=argument10;
+rotation=argument11;
+blend=argument12;
+alpha=argument13;
+scale=argument14;
+instant=argument15;
+
+o.light[i]=st_vec2d_set(ofsx,ofsy);
+o.light_color[i]=color;
+o.light_tween[i]=light_tween;
+o.light_duration[i]=light_duration;
+o.light_sprite[i]=light_sprite;
+o.light_sub[i]=light_sub;
+o.light_dsub[i]=light_dsub;
+o.light_spin[i]=light_spin;
+o.light_rotation[i]=rotation;
+o.light_blend[i]=blend;
+o.light_alpha[i]=alpha;
+o.light_scale[i]=scale;
+o.light_instant[i]=instant;

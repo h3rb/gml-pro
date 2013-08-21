@@ -1,0 +1,9 @@
+global.tables=0;
+global.table_names[0]="";
+global.table_columns[0]="";
+global.table_notes[0,0]="";
+global.table_data[0,0]="";
+global.table_rows[0]=0;
+global.datavec[0]=0;
+global.datavec[1]=0;
+global.datavec[2]=0;

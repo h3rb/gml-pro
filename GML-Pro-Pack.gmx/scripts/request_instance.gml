@@ -1,0 +1,13 @@
+var o,t,a,ecks,why,q;
+o=argument0;
+t=argument1;
+a=argument2;
+ecks=argument3;
+why=argument4;
+q=global.explosion_manager.instance_queue;
+global.explosion_manager.instance_object[q]=o;
+global.explosion_manager.instance_team[q]=t;
+global.explosion_manager.instance_angle[q]=a;
+global.explosion_manager.instance_x[q]=ecks;
+global.explosion_manager.instance_y[q]=why;
+global.explosion_manager.instance_queue+=1;

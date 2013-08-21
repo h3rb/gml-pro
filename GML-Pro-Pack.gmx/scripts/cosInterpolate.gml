@@ -1,0 +1,11 @@
+var v0,v1,v2,v3,e,P,Q,R,S;
+v0=argument0;
+v1=argument1;
+v2=argument2;
+v3=argument4;
+e=argument5;
+P = (v3 - v2) - (v0 - v1);
+Q = (v0 - v1) - P;
+R = v2 - v0;
+S = v1;
+return (P*e)*(P*e)*(P*e) + (Q*e)*(Q*e) + R*e + S;

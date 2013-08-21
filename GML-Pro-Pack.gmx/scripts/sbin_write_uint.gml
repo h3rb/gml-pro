@@ -1,0 +1,11 @@
+var v1,v2,v3,v4;
+v1 = argument1 >> 24;
+v2 = argument1 >> 16;
+v3 = argument1 >> 8;
+v4 = argument1;
+var s;
+s=sbin_write_byte(argument0,v1);
+s=sbin_write_byte(s,v2);
+s=sbin_write_byte(s,v3);
+s=sbin_write_byte(s,v4);
+return s;
