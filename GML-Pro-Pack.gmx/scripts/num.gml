@@ -1,1 +1,0 @@
-return real(argument0);
