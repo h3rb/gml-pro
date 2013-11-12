@@ -37,13 +37,15 @@ A large collection of shaders, images and utility functions for GameMaker Studio
   The License covers:
    Datasets, Images, Audio, GML Source Code, GLSL Source Code, Documentation
    
-   CRT1,CRT2, 
+   CRT1,CRT2, and some other third-parties cited in the GLSL source code.  Many
+   comments were removed from the source code, or shortened, to expedite the
+   compilation process.  Because of this, I share the following statement:
    Some shaders were based on shaders provided to the public domain by Themaister
    and also the author of mari0, someone named DOLLS, a person named cgwg, and a
    few other "anonymous copyright holders" -- and have various licenses.  GPL was
    offered as a license, but many of them are based on the work of other authors,
    and we're not sure who they were.  HQ4X for instance is an implementation of
    a technique discussed in a Siggraph paper, and some of the other shaders are
-   merely knockoffs of either HQ4X or the Bloom shader.
+   merely knockoffs of either HQ4X or the Bloom shader.  
   
 */
