@@ -52,5 +52,11 @@ A large collection of shaders, images and utility functions for GameMaker Studio
    within this project.  My license covers my work, which includes a majority of the
    shaders, and a majority of the functions excluding public domain and accredited
    licenses mentioned herein.
+   
+   This project also contains the work of the CDNA author, and my own work in Adobe Photoshop.
+   I also have included a few sound files which either I acted myself, created with my
+   professionally licensed studio software, contracted through Voices.com, or purchased royalty
+   free redistribution licenses to, and have included them in this project.  My audio partnerships
+   have included ProducerLoops.com, Strangesoft and a few indie performers.
   
 */
