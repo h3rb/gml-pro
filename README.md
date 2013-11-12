@@ -46,6 +46,11 @@ A large collection of shaders, images and utility functions for GameMaker Studio
    offered as a license, but many of them are based on the work of other authors,
    and we're not sure who they were.  HQ4X for instance is an implementation of
    a technique discussed in a Siggraph paper, and some of the other shaders are
-   merely knockoffs of either HQ4X or the Bloom shader.  
+   merely knockoffs of either HQ4X or the Bloom shader.  All of them utilize widely
+   adopted and common techniques.  Use them at your own discretion, but I am
+   presenting this background information on the legality of certain shaders contained
+   within this project.  My license covers my work, which includes a majority of the
+   shaders, and a majority of the functions excluding public domain and accredited
+   licenses mentioned herein.
   
 */
