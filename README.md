@@ -4,6 +4,7 @@ gml-pro
 A large collection of shaders, images and utility functions for GameMaker Studio 1.2+
 
 All shaders written for OpenGL GLSL ES
+
 /*
 
  Please read: https://creativecommons.org/tag/the-open-source-initiative
