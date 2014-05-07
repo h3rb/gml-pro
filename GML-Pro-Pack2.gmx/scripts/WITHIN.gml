@@ -1,0 +1,12 @@
+var i,j,x1,y1,x2,y2;
+i=argument0;
+j=argument1;
+x1=argument2;
+y1=argument3;
+x2=argument4;
+y2=argument5;
+if ( i < x1 ) return false;
+if ( i > x2 ) return false;
+if ( j < y1 ) return false;
+if ( j > y2 ) return false;
+return true;

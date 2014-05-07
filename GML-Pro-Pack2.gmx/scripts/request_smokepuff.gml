@@ -1,0 +1,20 @@
+var ecks,why,explosion,q;
+ecks=argument0;
+why=argument1;
+explosion=argument2;
+vx=argument3;
+vy=argument4;
+
+q=global.explosion_manager.queue;
+global.explosion_manager.explosion[q]=explosion;
+global.explosion_manager.count[q]=1;
+global.explosion_manager.duration[q]=0;
+global.explosion_manager.interval[q]=0;
+global.explosion_manager.timer[q]=0;
+global.explosion_manager.xs[q]=ecks;
+global.explosion_manager.ys[q]=why;
+global.explosion_manager.vx[q]=vx;
+global.explosion_manager.vy[q]=vy;
+global.explosion_manager.ofs[q]=0;
+global.explosion_manager.creep[q]=0;
+global.explosion_manager.queue++;

@@ -1,0 +1,28 @@
+shader_set(gles_2dNormalMap_1L);
+texture_set_stage(global.gles_2dNormalMap_1L_tex0,argument0);
+shader_set_uniform_f(global.gles_2dNormalMap_1L_resolution,
+ global.gles_2dNormalMap_resolution[0],
+ global.gles_2dNormalMap_resolution[1]
+); 
+shader_set_uniform_f(global.gles_2dNormalMap_1L_light_pos,
+ global.gles_2dNormalMap_Light1_position[0],
+ global.gles_2dNormalMap_Light1_position[1],
+ global.gles_2dNormalMap_Light1_position[2]
+);
+shader_set_uniform_f(global.gles_2dNormalMap_1L_light_color,
+ global.gles_2dNormalMap_Light1_color[0],
+ global.gles_2dNormalMap_Light1_color[1],
+ global.gles_2dNormalMap_Light1_color[2],
+ global.gles_2dNormalMap_Light1_color[3]
+);
+shader_set_uniform_f(global.gles_2dNormalMap_1L_light_falloff,
+ global.gles_2dNormalMap_Light1_falloff[0],
+ global.gles_2dNormalMap_Light1_falloff[1],
+ global.gles_2dNormalMap_Light1_falloff[2]
+);
+shader_set_uniform_f(global.gles_2dNormalMap_1L_ambient,
+ global.gles_2dNormalMap_ambient[0],
+ global.gles_2dNormalMap_ambient[1],
+ global.gles_2dNormalMap_ambient[2],
+ global.gles_2dNormalMap_ambient[3]
+);

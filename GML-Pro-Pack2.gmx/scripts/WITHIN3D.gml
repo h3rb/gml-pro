@@ -1,0 +1,11 @@
+var i,j,k,x1,y1,z1,x2,y2,z2;
+i=argument0;
+j=argument1;
+k=argument2;
+x1=argument3;
+y1=argument4;
+z1=argument5;
+x2=argument6;
+y2=argument7;
+z2=argument8;
+return ( i>=x1 && i<=x2 && j>=y1 && j<=y2 && k>=z1 && k<=z2 );

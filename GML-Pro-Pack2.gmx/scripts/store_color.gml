@@ -1,0 +1,10 @@
+var r,g,b,c,d;
+c=argument0;
+if ( argument_count == 1 ) d=global.d;
+else d=argument1;
+r=red(c);
+g=green(c);
+b=blue(c);
+var o;
+o=float(r)+d+float(g)+d+float(b)+d;
+return o;

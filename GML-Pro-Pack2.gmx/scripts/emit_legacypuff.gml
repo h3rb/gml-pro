@@ -1,0 +1,35 @@
+var ecks,why,dx,dy,sprite,sub,blend,tint,xin,xout,duration,in,out,scale;
+ecks=argument[0];
+why=argument[1];
+dx=argument[2];
+dy=argument[3];
+sprite=argument[4];
+sub=argument[5];
+blend=argument[6];
+tint=argument[7];
+xin=argument[8];
+xout=argument[9];
+duration=argument[10];
+in=argument[11];
+out=argument[12];
+if ( argument_count > 12 ) {
+ scale=argument[13];
+} else scale=1.0;
+
+o=instance_create(ecks,why,FAF_LegacyPuff);
+o.x=ecks;
+o.y=why;
+o.dx=dx;
+o.dy=dy;
+o.sprite=sprite;
+o.sub=sub;
+o.blend=blend;
+o.tint=tint;
+o.xin=xin;
+o.xout=xout;
+o.duration=duration;
+o.in=in;
+o.out=out;
+o.scale=scale;
+o.team=9999;
+return o;

@@ -1,0 +1,12 @@
+var s,val,b1,b2,b3,b4;
+s=sbin_read_byte(argument0);
+b1 = global.bytes[0];
+s=sbin_read_byte(s);
+b2 = global.bytes[0];
+s=sbin_read_byte(s);
+b3 = global.bytes[0];
+s=sbin_read_byte(s);
+b4 = global.bytes[0];
+s=sbin_read_byte(s);
+global.ints[0] = (b1 << 24) + (b2 << 16)+ (b3 << 8) + b4;
+return s;
