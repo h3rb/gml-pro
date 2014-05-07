@@ -6,6 +6,11 @@ All shaders written for OpenGL GLSL ES
 
 IF YOU DOWNLOAD THIS PLEASE STAR THE PROJECT ON GITHUB, THANKS!
 
+Recent changes:
+
+- Audio section recently updated and bugs fixed.
+- No longer serving a GMZ, we are now serving a GMX folder
+
 /*
 
  Please read: https://creativecommons.org/tag/the-open-source-initiative
