@@ -67,4 +67,7 @@ Recent changes:
    free redistribution licenses to, and have included them in this project.  My audio partnerships
    have included ProducerLoops.com, Strangesoft and a few indie performers.
   
+  Portions copyright (c) 2007-2014, GMLscripts.com
+  http://www.gmlscripts.com/license.html
+  
 */
