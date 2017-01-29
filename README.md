@@ -6,6 +6,10 @@ All shaders written for OpenGL GLSL ES
 
 IF YOU DOWNLOAD THIS PLEASE STAR THE PROJECT ON GITHUB, THANKS!
 
+__How to use this stuff__
+
+This is in no way a complete game.  You are best advised to pick through it, and decide what you want to use, then either copy it over to your existing project, or cut GML-Pro down in size until you've got only what you need, because it does slow down your compile times.
+
 Recent changes:
 
 - Audio section recently updated and bugs fixed.
