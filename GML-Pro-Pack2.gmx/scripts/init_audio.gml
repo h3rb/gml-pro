@@ -86,7 +86,7 @@ for ( i=0; i<global.audio_grid_w; i++ ) {
   global.audio_grid[v]=e;
   audio_emitter_falloff(e,audio_near,audio_far,1.0);
   audio_emitter_position(e,(i-gw2)*gcw,(j-gh2)*gch,0);
-  audio_emitter_pitch(e,1.0+random_posneg(0.1));
+  audio_emitter_pitch(e,1.0+random(0.2)-0.1);
  }
 }
 // Radio
