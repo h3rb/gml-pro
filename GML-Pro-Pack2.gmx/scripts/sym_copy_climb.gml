@@ -1,5 +1,5 @@
 
-var arrayID, copyID currentVal, current, size, fromMap, newMap;
+var arrayID, copyID, currentVal, current, size, fromMap, newMap;
 
 arrayID = argument[0];
 copyID = argument[1];
