@@ -322,7 +322,7 @@
       <scripts name="Strings">
         <script>scripts\int.gml</script>
         <script>scripts\float.gml</script>
-        <script>scripts\bool.gml</script>
+        <script>scripts\s_bool.gml</script>
         <script>scripts\to_bool.gml</script>
         <script>scripts\string_split.gml</script>
         <script>scripts\string_split2.gml</script>
