@@ -14,6 +14,7 @@ Recent changes:
 
 - Audio section recently updated and bugs fixed.
 - No longer serving a GMZ, we are now serving a GMX folder
+- Updated to work flawlessly for GMS2, but remains an importable GMZ for legacy compatibility
 
 /*
 
