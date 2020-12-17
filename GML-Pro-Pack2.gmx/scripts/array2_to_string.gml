@@ -31,7 +31,7 @@ if ( use_type == 0 ) { // string
 } else if ( use_type == 3 ) { // bool
  for ( i=0; i<w; i++ )  {
   for ( j=0; j<h; j++ ) {
-   out+=bool(global.script_array2[i,j])+sep1;
+   out+=s_bool(global.script_array2[i,j])+sep1;
   }
   out+=sep2;
  }
