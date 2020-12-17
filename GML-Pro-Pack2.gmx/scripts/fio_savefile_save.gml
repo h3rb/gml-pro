@@ -1,3 +1,4 @@
+// this is just an example...
 var filename,out,i;
 filename=argument0;
 out="";
