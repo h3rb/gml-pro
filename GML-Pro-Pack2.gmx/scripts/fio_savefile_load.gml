@@ -1,3 +1,4 @@
+// this is just an example...
 var filename,in,size;
 filename=argument0;
 in=decrypt(file_as_string(filename));
