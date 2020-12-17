@@ -43,7 +43,7 @@ maxw=170;
 maxh=170;
 maxx=170*64;
 maxy=170*64;
-layer=5;
+layer_=5;
 new_map(0,maxw,maxh); // distance bg
 new_map(1,maxw,maxh); // closer bg
 new_map(2,maxw,maxh); // closest bg
@@ -145,14 +145,14 @@ if ( k &lt; 2 ) mtoy=0; else mtoy=real("0."+global.script_string_split[1]);
 
 if ( mouse_check_button(mb_left) ) {
  var v;
- v=mtx+mty*global.map_w[layer];
- if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
-  global.map[layer,v]=sub;
-  global.mcode[layer,v]=drawCode;
-  global.mcolor[layer,v]=drawColor;
-  global.malpha[layer,v]=drawAlpha;
-  global.mblend[layer,v]=blend_presets[blendPreset];
-  global.mtileset[layer,v]=drawTileset;
+ v=mtx+mty*global.map_w[layer_];
+ if ( WITHIN(mtx,mty,0,0,global.map_w[layer_],global.map_h[layer_]) ) {
+  global.map[layer_,v]=sub;
+  global.mcode[layer_,v]=drawCode;
+  global.mcolor[layer_,v]=drawColor;
+  global.malpha[layer_,v]=drawAlpha;
+  global.mblend[layer_,v]=blend_presets[blendPreset];
+  global.mtileset[layer_,v]=drawTileset;
  }
  if ( autoRotateSub ) {
   sub+=1;
@@ -162,8 +162,8 @@ if ( mouse_check_button(mb_left) ) {
 
 if ( mouse_check_button(mb_right) ) {
  var v;
- v=mtx+mty*global.map_w[layer];
- if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) global.map[layer,v]=-1;
+ v=mtx+mty*global.map_w[layer_];
+ if ( WITHIN(mtx,mty,0,0,global.map_w[layer_],global.map_h[layer_]) ) global.map[layer_,v]=-1;
 }
 
 if ( mouse_check_button_released(mb_middle) ) {
@@ -181,10 +181,10 @@ if ( keyDelay &lt;= 0 and keyboard_check(ord('I')) ) {
 // Remove objects on tile
 if ( keyDelay &lt;= 0 and keyboard_check(ord('U')) ) {
  var v;
- v=mtx+mty*global.map_w[layer];
- if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
-  global.mobj[layer,v]=-1;
-  global.mobj2[layer,v]=-1;
+ v=mtx+mty*global.map_w[layer_];
+ if ( WITHIN(mtx,mty,0,0,global.map_w[layer_],global.map_h[layer_]) ) {
+  global.mobj[layer_,v]=-1;
+  global.mobj2[layer_,v]=-1;
  }
  keyDelay=0.5;
 }
@@ -192,16 +192,16 @@ if ( keyDelay &lt;= 0 and keyboard_check(ord('U')) ) {
 // Place object
 if ( keyDelay &lt;= 0 and keyboard_check(ord('P')) ) {
  var v;
- v=mtx+mty*global.map_w[layer];
- if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) global.mobj[layer,v]=drawObject;
+ v=mtx+mty*global.map_w[layer_];
+ if ( WITHIN(mtx,mty,0,0,global.map_w[layer_],global.map_h[layer_]) ) global.mobj[layer_,v]=drawObject;
  keyDelay=1.0;
 }
 
 // Place object
 if ( keyDelay &lt;= 0 and keyboard_check(ord('Y')) ) {
  var v;
- v=mtx+mty*global.map_w[layer];
- if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) global.mobj2[layer,v]=drawObject;
+ v=mtx+mty*global.map_w[layer_];
+ if ( WITHIN(mtx,mty,0,0,global.map_w[layer_],global.map_h[layer_]) ) global.mobj2[layer_,v]=drawObject;
  keyDelay=1.0;
 }
 
@@ -221,18 +221,18 @@ if ( keyDelay &lt;= 0 and keyboard_check(ord('V')) ) {
 // Add light
 if ( keyDelay &lt;= 0 and keyboard_check(ord('J')) ) {
  var v;
- v=mtx+mty*global.map_w[layer];
- if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
-  global.mlight[layer,v]=drawLight;
-  global.mlightc[layer,v]=drawColor;
+ v=mtx+mty*global.map_w[layer_];
+ if ( WITHIN(mtx,mty,0,0,global.map_w[layer_],global.map_h[layer_]) ) {
+  global.mlight[layer_,v]=drawLight;
+  global.mlightc[layer_,v]=drawColor;
  }
  keyDelay=1.0;
 }
 // Remove light
 if ( keyboard_check(ord('K')) ) {
  var v;
- v=mtx+mty*global.map_w[layer];
- if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) global.mlight[layer,v]=-1;
+ v=mtx+mty*global.map_w[layer_];
+ if ( WITHIN(mtx,mty,0,0,global.map_w[layer_],global.map_h[layer_]) ) global.mlight[layer_,v]=-1;
 }
 
 // Place:
@@ -491,7 +491,7 @@ if ( onionMode ) {
      t= global.mtileset[l,v];
      if ( s &gt;= 0 ) {
       draw_set_blend_mode(b);
-      if ( l == layer ) 
+      if ( l == layer_ ) 
       draw_sprite_ext(tileset_presets[t],s,(i-mx)*64,(j-my)*64,1,1,0,c,a);
       else 
       draw_sprite_ext(tileset_presets[t],s,(i-mx)*64,(j-my)*64,1,1,0,c,a/10);
@@ -501,7 +501,7 @@ if ( onionMode ) {
       draw_rectangle((i-mx)*64-5,(j-my)*64-5,(i-mx)*64+5,(j-my)*64+5,false);
      }
      m= global.mcode[l,v];
-     if ( l==layer and m == 1 ) {
+     if ( l==layer_ and m == 1 ) {
       draw_set_color(c_orange);
       draw_text((i-mx)*64-20,(j-my)*64,"SOLID");
      }
@@ -542,23 +542,23 @@ if ( not exclusiveMode ) {
 } else {
  for (i=mx;i&lt;mx+rw;i++) {
   for (j=my;j&lt;my+rh;j++) {
-   if ( WITHIN(i,j,0,0,global.map_w[layer],global.map_h[layer]) ) {
+   if ( WITHIN(i,j,0,0,global.map_w[layer_],global.map_h[layer_]) ) {
     var v,s,a,b,c,a,m,t;
-    v=i+j*global.map_w[layer];
-    s= global.map[layer,v];
-    b= global.mblend[layer,v];
-    c= global.mcolor[layer,v];
-    a= global.malpha[layer,v];
-    t= global.mtileset[layer,v];
+    v=i+j*global.map_w[layer_];
+    s= global.map[layer_,v];
+    b= global.mblend[layer_,v];
+    c= global.mcolor[layer_,v];
+    a= global.malpha[layer_,v];
+    t= global.mtileset[layer_,v];
     if ( s &gt;= 0 ) {
      draw_set_blend_mode(b);
      draw_sprite_ext(tileset_presets[t],s,(i-mx)*64,(j-my)*64,1,1,0,c,a);
     }
-    if ( global.mlight[layer,v] &gt;= 0 ) {
-     draw_set_color(global.mlightc[layer,v]);
+    if ( global.mlight[layer_,v] &gt;= 0 ) {
+     draw_set_color(global.mlightc[layer_,v]);
      draw_rectangle((i-mx)*64-5,(j-my)*64-5,(i-mx)*64+5,(j-my)*64+5,false);
     }
-    m= global.mcode[layer,v];
+    m= global.mcode[layer_,v];
     if ( m == 1 ) {
      draw_set_color(c_orange);
      draw_text((i-mx)*64-20,(j-my)*64,"SOLID");
@@ -610,7 +610,7 @@ draw_text(5+150+150,5,int(mouse_x)+","+int(mouse_y));
 draw_text(5+150+150+150,5,"Mx,my: "+int(mx)+","+int(my));
 draw_text(5+150+150+150+150,5,"WxH: "+int(global.map_w[0])+","+int(global.map_h[0]));
 draw_text(5+150+150+150+150+150,5,
- " Layer: "+int(layer)
+ " layer_: "+int(layer_)
 +" Blend: "+int(blendPreset)
 +" Alpha: "+float(drawAlpha)
 +" Tiles: "+int(drawTileset)
@@ -630,23 +630,23 @@ draw_sprite_ext(tileset_presets[drawTileset],sub,room_width-64,32,1,1,0,drawColo
 
 {
  var v;
- v=mtx+mty*global.map_w[layer];
- if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
+ v=mtx+mty*global.map_w[layer_];
+ if ( WITHIN(mtx,mty,0,0,global.map_w[layer_],global.map_h[layer_]) ) {
   draw_set_color(c_lime);
   draw_text(64,room_height-64,
     "sub: "
-   +int(global.map[layer,v])+", code:"
-   +int(global.mcode[layer,v])+" alpha: "
-   +float(global.malpha[layer,v])+" blend: "
-   +int(global.mblend[layer,v])+" tiles: "
-   +int(global.mtileset[layer,v])+" obj: "
-   +int(global.mobj[layer,v])+" obj2: "
-   +int(global.mobj2[layer,v])+" L: "
-   +int(global.mlight[layer,v])
+   +int(global.map[layer_,v])+", code:"
+   +int(global.mcode[layer_,v])+" alpha: "
+   +float(global.malpha[layer_,v])+" blend: "
+   +int(global.mblend[layer_,v])+" tiles: "
+   +int(global.mtileset[layer_,v])+" obj: "
+   +int(global.mobj[layer_,v])+" obj2: "
+   +int(global.mobj2[layer_,v])+" L: "
+   +int(global.mlight[layer_,v])
   );
-  draw_set_color(global.mcolor[layer,v]);
+  draw_set_color(global.mcolor[layer_,v]);
   draw_rectangle(5,room_height-64,24,room_height-40,false);
-  draw_set_color(global.mlightc[layer,v]);
+  draw_set_color(global.mlightc[layer_,v]);
   draw_rectangle(5+24,room_height-64,24+24,room_height-40,false);
   draw_set_color(c_white);
  }
@@ -667,7 +667,7 @@ if ( keyboard_check(ord('H')) ) {
 +"Modify pen: (S)Code (T)ileset (M)Object (V)Light (Z)Tween#"
 +" (*)grab#"
 +"(shift/ctrl)+ (R)(G)(B),(x)mode (o)nion-mode bl(E)nd (A)lpha (W)=white#"
-+"0,1,2..9 active layer#"
++"0,1,2..9 active layer_#"
 +"(J) Place CBNA Light with Draw Color, (K) remove light from tile#"
 +"(I) Change Object, (U) (remove all objects from this tile), (Y)(P)lace object#"
 +"(INS) Place precise light (DEL) Remove it#"
@@ -875,14 +875,14 @@ if ( keyboard_check(ord('B')) ) {
           <argument>
             <kind>1</kind>
             <string>var v;
-v=mtx+mty*global.map_w[layer];
-if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
- drawColor=global.mcolor[layer,v];
- drawCode=global.mcode[layer,v];
- drawAlpha=global.malpha[layer,v];
- drawBlend=global.mblend[layer,v];
- drawTileset=global.mtileset[layer,v];
- sub=global.map[layer,v];
+v=mtx+mty*global.map_w[layer_];
+if ( WITHIN(mtx,mty,0,0,global.map_w[layer_],global.map_h[layer_]) ) {
+ drawColor=global.mcolor[layer_,v];
+ drawCode=global.mcode[layer_,v];
+ drawAlpha=global.malpha[layer_,v];
+ drawBlend=global.mblend[layer_,v];
+ drawTileset=global.mtileset[layer_,v];
+ sub=global.map[layer_,v];
 }
 </string>
           </argument>
@@ -952,7 +952,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=8;
+            <string>layer_=8;
 </string>
           </argument>
         </arguments>
@@ -975,7 +975,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=7;
+            <string>layer_=7;
 </string>
           </argument>
         </arguments>
@@ -998,7 +998,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=6;
+            <string>layer_=6;
 </string>
           </argument>
         </arguments>
@@ -1021,7 +1021,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=5;
+            <string>layer_=5;
 </string>
           </argument>
         </arguments>
@@ -1044,7 +1044,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=4;
+            <string>layer_=4;
 </string>
           </argument>
         </arguments>
@@ -1067,7 +1067,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=3;
+            <string>layer_=3;
 </string>
           </argument>
         </arguments>
@@ -1090,7 +1090,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=2;
+            <string>layer_=2;
 </string>
           </argument>
         </arguments>
@@ -1113,7 +1113,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=1;
+            <string>layer_=1;
 </string>
           </argument>
         </arguments>
@@ -1136,7 +1136,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=0;
+            <string>layer_=0;
 </string>
           </argument>
         </arguments>
@@ -1159,7 +1159,7 @@ if ( WITHIN(mtx,mty,0,0,global.map_w[layer],global.map_h[layer]) ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>layer=9;
+            <string>layer_=9;
 </string>
           </argument>
         </arguments>
