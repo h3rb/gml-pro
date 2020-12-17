@@ -44,7 +44,7 @@ if ( global.instance_messages_send ) {//
   }
  }
  // Copy back remaining messages
- for ( i=0; i<new; i++ ) {
+ for ( i=0; i<new_; i++ ) {
   global.instance_message_room[i]    =new_r[i];
   global.instance_message_uid[i]     =new_u[i];
   global.instance_message_number[i]  =new_n[i];
