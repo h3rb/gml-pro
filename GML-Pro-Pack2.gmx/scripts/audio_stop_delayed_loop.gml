@@ -17,7 +17,7 @@ for ( j=0; j<global.cued_loops; j++ ) {
   new_loop_count[new_]=global.cued_loop_count[j];
   new_loop_delay[new_]=global.cued_loop_delay[j];
   new_loop_instance[new_]=global.cued_loop_instance[j];
-  new+=1;
+  new_+=1;
  }
 }
 global.cued_loops-=1;
