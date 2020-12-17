@@ -24,7 +24,7 @@ if ( global.radio_queue > 0 ) {
  draw_text(32+8+1,8+4-1,global.radio_caption[0]);
  // background
  var newlines=lines(global.radio_string[0]);
- var h=(8+64+8)+floor((newlines-4)*16,0);
+ var h=(8+64+8)+floor((newlines-4)*16);
  var tw=longest_line(global.radio_string[0])*16;
  draw_set_alpha(a*0.8);
  draw_set_color(global.radio_bgcolor[0]); 
