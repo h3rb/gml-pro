@@ -40,7 +40,7 @@ if ( global.instance_messages_send ) {//
    new_t[new_]=global.instance_message_type[i];
    new_d[new_]=global.instance_message_data[i];
    new_delay[new_]=global.instance_message_delay[i];
-   new+=1;
+   new_+=1;
   }
  }
  // Copy back remaining messages
